@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.cart {
+
+    float: right;
+    font-size: 30px;
+    margin: 5px;
+    background-color: aliceblue;
+
+}
+
+.cartnumber {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 100%;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+}
+
+.cartitem {
+    display: none;
+    position: absolute;
+    margin-left: 1100px;
+    height: 660px;
+    width: 350px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.cartshow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.addeditem {
+    background-color: rgb(41, 40, 40);
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#cartitem {
+    height: 450px;
+    overflow: scroll;
+}
+
+.itemimg img {
+    width: 60px;
+    height: 100px;
+}
+
+.itemvalue {
+    padding: 10px;
+}
+
+.itemvalue p {
+    font-size: 20px;
+    color: orange;
+    font-weight: 300;
+
+}
+
+.itemvalue span {
+    font-weight: 300;
+}
+
+.itemname h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 0%;
+
+}
+
+.btnofplusminus {
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.itemname p {
+    color: rgb(81, 78, 78);
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.subtotal {
+    color: rgb(77, 74, 74);
+
+}
+
+.totalprice {
+    display: flex;
+    font-size: 25px;
+    font-weight: 300;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.bill {
+    color: orange;
+    font-weight: 700;
+}
+
+.checkbillamount {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+    height: 40px;
+    color: aliceblue;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgb(42, 42, 42);
+    border: none;
+}
+
+.main {
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+}
+
+.part1 {
+    height: 100vh;
+    width: 20%;
+}
+
+.part2 {
+
+    height: 100vh;
+    width: 80%;
+}
+
+.maincontent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+
+}
+
+.productdisplay {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 550px;
+    border: 1px solid whitesmoke;
+    margin: 10px;
+}
+
+.productdisplay img {
+    width: 250px;
+    height: 350px;
+}
+
+.productname {
+    margin: 15px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+}
+
+.productprice {
+    text-align: center;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.productprice b {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.productdisplay button {
+    margin-top: auto;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    border: none;
+}
+
+.productdisplay button:hover {
+    background-color: rgb(214, 178, 14);
+    color: white;
+}
+
+.sizediv {
+    margin-left: 50px;
+
+}
+
+.sizebtn {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.roundbttn {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(240, 238, 238);
+    border: 2px solid rgb(240, 238, 238);
+    border-radius: 100%;
+    margin: 7px;
+    cursor: pointer;
+    /* text-align: center; */
+
+}
+
+.roundbttn p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+button {
+    cursor: pointer;
+}
