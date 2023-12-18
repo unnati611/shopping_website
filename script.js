@@ -4,7 +4,7 @@ const products = [
     productprice: 10.9,
     iamgea: "images/image1a.webp",
     imageb: "images/image1-b.webp",
-    size: ["XL", "L", ""],
+    size: ["XL", "L"],
     quantity: 1,
   },
   {
@@ -81,19 +81,18 @@ function showproducts(producttoshow) {
     let btnclick = document.getElementsByClassName("aaddcart")[index];
     btnclick.addEventListener("click", function () {
       totalprice = 0;
-      btnclick.style.backgroundColor = "orange";
-
+      // btnclick.style.backgroundColor = "orange";
       console.log(element);
       cartitemshowobj.push(element);
       console.log(cartitemshowobj);
 
       cartnumber.style.display = "flex";
       numberoncart++;
-      cartnumber.innerText = numberoncart;
+      cartnumber.innerText = cartitemshowobj.length;
       document.getElementById("cartitem").innerHTML = "";
-
+      btndisabled(producttoshow);
       main();
-      btnclick.disabled = true;
+      // btnclick.disabled = true;
     });
 
     let productdisplayimg = document.querySelectorAll(".productdisplay");
@@ -109,6 +108,7 @@ function showproducts(producttoshow) {
     });
   }
   showproductlength();
+  btndisabled(producttoshow);
 }
 showproducts(products);
 
@@ -184,9 +184,9 @@ function main() {
     dltbtn.addEventListener("click", function () {
       cartitemshowobj.splice(i, 1);
       document.getElementById("cartitem").innerHTML = "";
-
+      btndisabled(products);
       main();
-      cartnumber.innerText = cartitemshowobj.length - 1;
+      cartnumber.innerText = cartitemshowobj.length;
     });
   }
   subtotal();
@@ -226,4 +226,26 @@ function minusfunc(e) {
   main();
   numberoncart -= 1;
   cartnumber.innerText = numberoncart;
+}
+
+// filterfunction for btn disable
+function btndisabled(data) {
+  const allbtn = document.querySelectorAll(".aaddcart");
+  data.forEach((element, index) => {
+    const isAvailable = cartitemshowobj.filter((ele) => {
+      if (ele.productname === element.productname) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    if (isAvailable.length > 0) {
+      allbtn[index].disabled = true;
+      allbtn[index].style.backgroundColor = "orange";
+    } else {
+      allbtn[index].disabled = false;
+      allbtn[index].style.backgroundColor = "black";
+    }
+    console.log(isAvailable, index);
+  });
 }

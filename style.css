@@ -238,3 +238,58 @@ body {
 button {
     cursor: pointer;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Responsive styles using media queries */
+@media only screen and (max-width: 768px) {
+    .cart {
+        float: none;
+        font-size: 24px;
+        margin: 5px;
+        background-color: aliceblue;
+    }
+
+    .cartnumber {
+        top: 18px;
+        right: 15px;
+    }
+
+    .cartitem {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .part1,
+    .part2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .productdisplay {
+        width: 100%;
+        height: auto;
+    }
+
+    .productdisplay img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sizebtn {
+        margin-left: 0;
+    }
+}
+
+/* Add more media queries as needed for different screen sizes */
